@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Homepage</title>
-    <link rel="stylesheet" href="assets/css/loginStaff.css">
+    <link rel="stylesheet" href="/static/css/loginStaff.css">
 </head>
 <body>
   <header>
-    <img src="assets/img/nobackground.png" alt="logo" width="15%">
+    <img src="/static/css/img/nobackground.png" alt="logo" width="15%">
   </header>
 
   <div class="container">
     <!-- Update the form action and method attributes for Flask -->
-    <form action="{{ url_for('login_route') }}" method="post">
+    <form action="/login" method="post">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
 
