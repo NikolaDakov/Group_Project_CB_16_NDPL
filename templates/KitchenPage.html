@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="/static/css/loginStaff.css">
+
+    <style>
+        .kitchen-container {
+            display: flex;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 22px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .table {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            width: 30%;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .order-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .order-item {
+            text-align: left;
+            border: 5px solid #ddd;
+            border-color: orange;
+            margin: 6px ;
+            padding: 7px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .timer {
+            font-weight: bold;
+            color: red;
+        }
+
+        .luigi-button {
+            position: left;
+            top: 10px;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+  <header>
+    <button onclick="ToLogin">Luigi13</button>
+    <img src="/static/css/img/nobackground.png" alt="logo" width="15%">
+  </header>
+
+  <div class="kitchen-container">
+    <div class="table">
+        <h2><center>Orders To Be Done</h2></center>
+        <ul class="order-list" id="todo-list">
+            <!-- example orders -->
+            <li class="order-item">
+                <input type="checkbox">
+                Peperoni 222
+            </li>
+            <li class="order-item">
+                <input type="checkbox">
+                Hertogenbosh 222
+            </li>
+            <li class="order-item">
+                <input type="checkbox">
+                Nadenica s bob
+            </li>
+        </ul>
+        <button id="take-in-button"><h2>Take In</h2></button>
+    </div>
+    
+    <div class="table">
+        <h2><center>Orders In Progress</center></h2>
+        <ul class="order-list" id="in-progress-list">
+            
+        </ul>
+        <button id="go-to-furnace-button"><h2>Go To Furnace</2h></button>
+    </div>
+
+    <div class="table">
+        <h1><center>Furnace</center></h1>
+        <ul class="order-list" id="in-furnace-list">
+           
+        </ul>
+    </div>
+</div>
+
+<script>
+    const todoList = document.getElementById("todo-list");
+    const inProgressList = document.getElementById("in-progress-list");
+    const inFurnaceList = document.getElementById("in-furnace-list");
+    const takeInButton = document.getElementById("take-in-button");
+    const goToFurnaceButton = document.getElementById("go-to-furnace-button");
+
+    function toLogin() {
+    location.replace("https://www.w3schools.com")
+    }
+
+    // Function to move orders
+    function moveOrder(sourceList, targetList) {
+        const selectedItems = Array.from(sourceList.querySelectorAll(".order-item input:checked"));
+        selectedItems.forEach(item => {
+            targetList.appendChild(item.parentNode);
+        });
+    }
+
+     // Function for furnace timer
+     function removeAfterTimeout(orderItem) {
+            const timerElement = document.createElement("span");
+            timerElement.className = "timer";
+            timerElement.textContent = "10s";
+            orderItem.appendChild(timerElement);
+
+            const timer = setInterval(() => {
+                const timeLeft = parseInt(timerElement.textContent) - 1;
+                timerElement.textContent = timeLeft + "s";
+                if (timeLeft === 0) {
+                    clearInterval(timer);
+                    orderItem.remove();
+                }
+            }, 1000);
+        }
+
+    takeInButton.addEventListener("click", () => {
+        moveOrder(todoList, inProgressList);
+    });
+
+    goToFurnaceButton.addEventListener("click", () => {
+        moveOrder(inProgressList, inFurnaceList);
+        const inFurnaceItems = Array.from(inFurnaceList.querySelectorAll(".order-item"));
+        inFurnaceItems.forEach(item => {
+            removeAfterTimeout(item);
+        });
+    });
+</script>
+
+<footer>
+    <p>&copy; 2023 NDPL. All rights reserved</p>
+</footer>
+
+</body>
+</html>
