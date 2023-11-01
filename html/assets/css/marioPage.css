@@ -1,0 +1,85 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+header, footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+header {
+    height: 100px;
+}
+
+header img {
+    text-align: center;
+    position: relative;
+    margin-top: -5%;
+    margin-right: 5%;
+}
+
+header h1, footer p {
+    margin: 0;
+}
+
+header .username {
+    float: left;
+    margin-left: 1px;
+        
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+ }
+
+
+ table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    
+    height: calc(100% - 100px);
+    overflow-y: scroll;
+}
+.table {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+}
+
+th:nth-child(5) { 
+    width: 25%;
+} 
+
+header .menuButton {
+    float: left;
+    margin-left: 1%;
+    font-size: 30px;
+    text-decoration: none;
+    color: red;
+
+}
+
+header .menuButton:hover {
+    transition: 0.5s;
+    opacity: 50%;
+    border-bottom: red 5px solid;
+
+}
