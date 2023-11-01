@@ -1,0 +1,43 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+header, footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+header {
+    height: 100px;
+}
+
+header img {
+    text-align: center;
+    position: relative;
+    margin-top: -5%;
+    max-width: 100%;
+    height: auto;
+    width: 15%;
+}
+
+header h1, footer p {
+    margin: 0;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+ }
+
+ @media only screen and (width: 375px) {
+    /* Adjust the logo size for smaller screens */
+    header img {
+        width: 100%;
+        bottom: 40px;
+    }
+}
