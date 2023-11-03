@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, url_for, flash
 
 app = Flask(__name__)
 
@@ -23,12 +23,17 @@ def login():
         if username in users and users[username] == password:
             return redirect('/marioPage')  # Redirect to the 'marioPage' route
         else:
-            return '<h1>Invalid credentials!</h1>'
+            return redirect('/invalidMessage')
 
 # Route to display the 'marioPage.html'
 @app.route('/marioPage')
 def mario_page():
     return render_template('marioPage.html')  
+
+# Route to display the 'invalidMessage.html'
+@app.route("/invalidMessage")
+def invalid_message() :
+    return render_template('invalidMessage.html')
 
 if __name__ == '__main__':
     app.run()
