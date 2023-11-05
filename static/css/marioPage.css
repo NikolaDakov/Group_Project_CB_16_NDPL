@@ -71,9 +71,12 @@ th:nth-child(5) {
 header .menuButton {
     float: left;
     margin-left: 1%;
+    margin-top: 2%;
     font-size: 30px;
     text-decoration: none;
     color: red;
+    position: relative;
+    right: 5%;
 
 }
 
