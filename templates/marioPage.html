@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Homepage</title>
-    <link rel="stylesheet" href="/static/css/marioPage.css">
+    <link rel="stylesheet" href="../static/css/marioPage.css">
 </head>
 <body>
   <header>
@@ -11,59 +11,50 @@
     <br>
     <a href="http://127.0.0.1:5000/MenuPage" class="menuButton">Menu</a>
     
-    <a href="http://127.0.0.1:5000/"><img src="/static/css/img/newimg.png" alt="logo" width="15%"></a>
+    <a href="http://127.0.0.1:5000/"><img src="../static/css/img/newimg.png" alt="logo" width="15%"></a>
   </header>
 
-  
-  <table class="table">
-    <thead>
-        <tr>
-            <th>Unpaid</th>
-            <th>Ordered</th>
-            <th>In progress</th>
-            <th>In Furace</th>
-            <th>Completed</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Square 1</td>
-            <td>Square 2</td>
-            <td>Square 3</td>
-            <td>Square 4</td>
-            <td>Square 5</td>
-        </tr>
-        <tr>
-            <td>Square 6</td>
-            <td>Square 7</td>
-            <td>Square 8</td>
-            <td>Square 9</td>
-            <td>Square 10</td>
-        </tr>
-        <tr>
-            <td>Square 11</td>
-            <td>Square 12</td>
-            <td>Square 13</td>
-            <td>Square 14</td>
-            <td>Square 15</td>
-        </tr>
-        <tr>
-            <td>Square 16</td>
-            <td>Square 17</td>
-            <td>Square 18</td>
-            <td>Square 19</td>
-            <td>Square 20</td>
-        </tr>
-        <tr>
-            <td>Square 21</td>
-            <td>Square 22</td>
-            <td>Square 23</td>
-            <td>Square 24</td>
-            <td>Square 25</td>
-        </tr>
-    </tbody>
-</table>
+  <div class="container">
+    <div class="table">
+        <h2><center>Unpaid</center></h2>
+        <ul class="order-list" id="in-progress-list">
+            
+        </ul>
+        <button id="go-to-furnace-button"><h2>Go To Furnace</2h></button>
+    </div>
 
+    <div class="table">
+        <h2><center>Ordered</center></h2>
+        <ul class="order-list" id="in-progress-list">
+            
+        </ul>
+        <button id="go-to-furnace-button"><h2>Go To Furnace</2h></button>
+    </div>
+
+    <div class="table">
+        <h2><center>In Progress</center></h2>
+        <ul class="order-list" id="in-progress-list">
+            
+        </ul>
+        <button id="go-to-furnace-button"><h2>Go To Furnace</2h></button>
+    </div>
+
+    <div class="table">
+        <h2><center>In Furnace</center></h2>
+        <ul class="order-list" id="in-progress-list">
+            
+        </ul>
+        <button id="go-to-furnace-button"><h2>Go To Furnace</2h></button>
+    </div>
+
+    <div class="table">
+        <h2><center>Completed</center></h2>
+        <ul class="order-list" id="in-progress-list">
+            
+        </ul>
+        <button id="go-to-furnace-button"><h2>Go To Furnace</2h></button>
+    </div>
+</div>
 
 <footer>
     <p>&copy; 2023 NDPL. All rights reserved</p>
