@@ -35,9 +35,14 @@ def kitchenPage():
     return render_template('kitchenPage.html') #route to display LuigiPage or KitchenPage
 
 # Route to display the 'invalidMessage.html'
-@app.route("/invalidMessage")
-def invalid_message() :
+@app.route('/invalidMessage')
+def invalid_message():
     return render_template('invalidMessage.html')
+
+# Route  to display the menupage!
+@app.route('/MenuPage')
+def MenuPage():
+    return render_template('MenuPage.html')  
 
 if __name__ == '__main__':
     app.run()
