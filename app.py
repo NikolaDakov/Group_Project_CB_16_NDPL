@@ -3,8 +3,8 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 app = Flask(__name__)
 
 # Dictionary to store predefined user credentials
-user1 ={'Mario12': 'k12'}
-user2 ={'Luigi13': 'k13'}
+user1 ={'Mario12': '12'}
+user2 ={'Luigi13': '13'}
 
 # Route for rendering the login form
 @app.route('/')
