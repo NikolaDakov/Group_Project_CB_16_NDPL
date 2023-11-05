@@ -3,10 +3,8 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 app = Flask(__name__)
 
 # Dictionary to store predefined user credentials
-users = {
-    'Mario12': '12',
-    'Luigi13': '13'
-}
+user1 ={'Mario12': 'k12'}
+user2 ={'Luigi13': 'k13'}
 
 # Route for rendering the login form
 @app.route('/')
@@ -20,8 +18,10 @@ def login():
         username = request.form['username']
         password = request.form['password']
 
-        if username in users and users[username] == password:
+        if username in user1 and user1[username] == password:
             return redirect('/marioPage')  # Redirect to the 'marioPage' route
+        elif username in user2 and user2[username] == password:
+            return redirect('/kitchenPage')  # Redirect to the 'luigiPage/kitchenPage' route
         else:
             return redirect('/invalidMessage')
 
@@ -29,6 +29,10 @@ def login():
 @app.route('/marioPage')
 def mario_page():
     return render_template('marioPage.html')  
+
+@app.route('/kitchenPage')
+def kitchenPage():
+    return render_template('kitchenPage.html') #route to display LuigiPage or KitchenPage
 
 # Route to display the 'invalidMessage.html'
 @app.route("/invalidMessage")
