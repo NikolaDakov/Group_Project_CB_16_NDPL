@@ -24,7 +24,11 @@ def login():
             return redirect('/kitchenPage')  # Redirect to the 'luigiPage/kitchenPage' route
         else:
             return redirect('/invalidMessage')
+# -----------------------------------------------------------------------------------------------------------------------
+# this will be for trasfer data from menuPage to mario and luigi's pages
 
+
+# -----------------------------------------------------------------------------------------------------------------------
 # Route to display the 'marioPage.html'
 @app.route('/marioPage')
 def mario_page():
