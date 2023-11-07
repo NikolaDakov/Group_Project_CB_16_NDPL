@@ -26,7 +26,9 @@
     <div class="table">
         <h2><center>Ordered</center></h2>
         <ul class="order-list" id="in-progress-list">
-            
+             <ul>
+                <h2><center>Ordered</center></h2>
+    </ul>
         </ul>
         <button id="go-to-furnace-button"><h2>Go To In Progress</2h></button>
     </div>
@@ -34,7 +36,6 @@
     <div class="table">
         <h2><center>In Progress</center></h2>
         <ul class="order-list" id="in-progress-list">
-            
         </ul>
         <button id="go-to-furnace-button"><h2>Go To Furnace</2h></button>
     </div>
@@ -54,6 +55,11 @@
         </ul>
     </div>
 </div>
+<p class="order-list" id="in-progress-list">
+    {% for order in orders %}
+        <li>{{ order }}</li>
+    {% endfor %}
+</p>
 
 <footer>
     <p>&copy; 2023 NDPL. All rights reserved</p>

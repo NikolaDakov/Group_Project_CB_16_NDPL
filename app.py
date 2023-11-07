@@ -26,6 +26,26 @@ def login():
             return redirect('/invalidMessage')
 # -----------------------------------------------------------------------------------------------------------------------
 # this will be for trasfer data from menuPage to mario and luigi's pages
+# Create a list to store orders (you can replace this with a database)
+orders = []
+
+@app.route('/MenuPage', methods=['POST'])
+def place_order():
+    item_name = request.form['item_name']
+    item_price = float(request.form['item_price'])
+    
+    # You can add more processing here, e.g., calculating total price
+
+    order = {
+        'item_name': item_name,
+        'item_price': item_price,
+    }
+    
+    orders.append(order)
+    
+    return render_template('marioPage.html', orders=orders )
+
+
 
 
 # -----------------------------------------------------------------------------------------------------------------------
