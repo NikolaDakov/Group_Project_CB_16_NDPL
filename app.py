@@ -47,6 +47,18 @@ def place_order():
 
 
 
+@app.route('/process_form', methods=['POST'])
+def process_form():
+    data_received = request.form.get('data')
+    return redirect(url_for('result', data=data_received))
+
+
+@app.route('/marioPage')
+def result():
+    data_received = request.args.get('data')
+    return render_template('marioPage.html', data=data_received)
+
+
 
 # -----------------------------------------------------------------------------------------------------------------------
 # Route to display the 'marioPage.html'

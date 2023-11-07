@@ -306,20 +306,23 @@
   <hr>
   <div id="container">
     <div id="label"><b>Currently Selected Items</div></b>
-    <p class="order-list" id="in-progress-list">
-      {% for order in orders %}
-          <li>{{ order }}</li>
-      {% endfor %}
-  </p>
-    <div class="resetbutton"><b>Reset</b></div>
-    <div class="orderbutton"><b>Order</b></div>
-</div>
+    
 
-  <hr>
-  <hr>
-  <hr>
-  <hr>
-  <hr>
+    
+      <form action="{{ url_for('process_form') }}" method="post">
+        <input type="hidden" name="data" value="{% for order in orders %}{{ order }}{% endfor %}">
+        <p class="order-list" id="in-progress-list">
+          {% for order in orders %}
+              <li>{{ order }}</li>
+          {% endfor %}
+      </p>
+        <button type="submit">Order</button>
+        <button type="reset"> Reset</button>
+      </form>
+    
+    <div class="resetbutton"><b>Reset</b></div>
+    
+</div>
   <script>
       
   </script>
