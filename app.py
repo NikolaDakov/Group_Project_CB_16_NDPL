@@ -46,7 +46,7 @@ def place_order():
      # Format the orders list
     formatted_orders = []
     for order in orders:
-        formatted_order = f'{order["Name"]} Name: {order["Name"]} Price: {order["Price"]} Euro'
+        formatted_order = f'Pizza: {order["Name"]} Price: {order["Price"]} Euro'
         formatted_orders.append(formatted_order)
     print(formatted_orders)
     return render_template('MenuPage.html', formatted_orders=formatted_orders )
