@@ -52,12 +52,21 @@ def place_order():
     return render_template('MenuPage.html', formatted_orders=formatted_orders )
 # ---------------------------------------------------------------------------------------------------------------
 #redirect orders to mario
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9d58558a0fb931064a0d342efe68ce264f786a6d
 data_recieved =[]
 @app.route('/process_form', methods=['POST'])
 def process_form():
     data = request.form['data']
     data_recieved.append(data)
+<<<<<<< HEAD
     return redirect(url_for('result', data_recieved=data_recieved))
+=======
+    return render_template('marioPage.html', data_recieved = data_recieved)
+
+>>>>>>> 9d58558a0fb931064a0d342efe68ce264f786a6d
 
 
 @app.route('/marioPage')

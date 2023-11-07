@@ -56,7 +56,11 @@
     </div>
 </div>
 
-<p>Data received: {{ data }}</p>
+<p class="order-list" id="in-progress-list">
+    {% for data in data_received %}
+        <li>{{ data }}</li>
+    {% endfor %}
+</p>
 
 <footer>
     <p>&copy; 2023 NDPL. All rights reserved</p>
