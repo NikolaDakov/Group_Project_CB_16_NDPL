@@ -52,9 +52,9 @@ def place_order():
     return render_template('MenuPage.html', formatted_orders=formatted_orders )
 # ---------------------------------------------------------------------------------------------------------------
 #redirect orders to mario
-@app.route("/data_transfer")
-def data_transfer():
-    return redirect("/marioPage", orders=orders)
+@app.route("/orderbutton", methods=['POST'])
+def orderbutton():
+    return render_template("/marioPage.html", orders=orders)
 #redirect orders to Luigi
 
 # data_recieved =[]
