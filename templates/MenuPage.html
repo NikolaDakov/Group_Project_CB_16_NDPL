@@ -455,24 +455,18 @@
           <li>{{ order1 }}</li>
       {% endfor %}
   </p>
-    <div class="resetbutton"><b>Reset</b></div>
+  <form method="POST" action="/resetbutton">
+    <button type="submit" class="resetbutton"><b>Reset</b></button>
+  </form>
+
+
     <div class="orderbutton"><b>Order</b></div>
 </div>
-
-    
-      <form action="{{ url_for('process_form') }}" method="post">
-        <input type="hidden" name="data" value="{% for order in orders %}{{ order["Name"] }}, {% endfor %}">
-        <p class="order-list" id="in-progress-list">
-          {% for order in orders %}
-                <li>{{ order["Name"] }} - Price: {{ order["Price"] }} Euro</li>
-            {% endfor %}
-      </p>
+<form method="POST" action="/orderbutton">
+  <button type="submit" class="orderbutton"><b>Order</b></button>
+</form>
         <button type="submit">Order</button>
-        <button type="reset"> Reset</button>
-      </form>
-    
-    <div class="resetbutton"><b>Reset</b></div>
-    
+
 </div>
   <script>
       

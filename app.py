@@ -52,20 +52,30 @@ def place_order():
     return render_template('MenuPage.html', formatted_orders=formatted_orders )
 # ---------------------------------------------------------------------------------------------------------------
 #redirect orders to mario
+@app.route("/data_transfer")
+def data_transfer():
+    return redirect("/marioPage", orders=orders)
+#redirect orders to Luigi
 
-data_recieved =[]
-@app.route('/process_form', methods=['POST'])
-def process_form():
-    data = request.form['data']
-    data_recieved.append(data)
-
-
-@app.route('/marioPage')
-def result():
-    data_received = request.args.get('data')
-    return render_template('marioPage.html', data=data_received)
+# data_recieved =[]
+# @app.route('/process_form', methods=['POST'])
+# def process_form():
+#     data = request.form['data']
+#     data_recieved.append(data)
 
 
+# @app.route('/marioPage')
+# def result():
+#     data_received = request.args.get('data')
+#     return render_template('marioPage.html', data=data_received)
+
+# -------------------------------------------------------------------------------------------------------------------5
+# Reset Function
+@app.route('/resetbutton', methods=['POST'])
+def resetbutton():
+    orders.clear()
+    print(orders)
+    return redirect('/MenuPage')
 
 # -----------------------------------------------------------------------------------------------------------------------
 # Route to display the 'marioPage.html'
