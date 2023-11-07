@@ -53,10 +53,13 @@ def place_order():
 # ---------------------------------------------------------------------------------------------------------------
 #redirect orders to mario
 
+data_recieved =[]
 @app.route('/process_form', methods=['POST'])
 def process_form():
-    data_received = request.form.get('data')
-    return redirect(url_for('result', data=data_received))
+    data = request.form['data']
+    data_recieved.append(data)
+    return render_template('marioPage.html', data_recieved = data_recieved)
+
 
 
 @app.route('/marioPage')
