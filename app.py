@@ -57,18 +57,6 @@ def orderbutton():
     return render_template("/marioPage.html", orders=orders)
 #redirect orders to Luigi
 
-# data_recieved =[]
-# @app.route('/process_form', methods=['POST'])
-# def process_form():
-#     data = request.form['data']
-#     data_recieved.append(data)
-
-
-# @app.route('/marioPage')
-# def result():
-#     data_received = request.args.get('data')
-#     return render_template('marioPage.html', data=data_received)
-
 # -------------------------------------------------------------------------------------------------------------------5
 # Reset Function
 @app.route('/resetbutton', methods=['POST'])
