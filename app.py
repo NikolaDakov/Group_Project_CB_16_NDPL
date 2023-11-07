@@ -43,7 +43,7 @@ def place_order():
     
     orders.append(order)
     
-    return render_template('marioPage.html', orders=orders )
+    return render_template('MenuPage.html', orders=orders )
 
 
 
@@ -54,9 +54,10 @@ def place_order():
 def mario_page():
     return render_template('marioPage.html')  
 
+#route to display LuigiPage or KitchenPage
 @app.route('/kitchenPage')
 def kitchenPage():
-    return render_template('kitchenPage.html') #route to display LuigiPage or KitchenPage
+    return render_template('kitchenPage.html') 
 
 # Route to display the 'invalidMessage.html'
 @app.route('/invalidMessage')
