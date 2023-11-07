@@ -50,8 +50,8 @@ def place_order():
         formatted_orders.append(formatted_order)
     print(formatted_orders)
     return render_template('MenuPage.html', formatted_orders=formatted_orders )
-
-
+# ---------------------------------------------------------------------------------------------------------------
+#redirect orders to mario
 
 @app.route('/process_form', methods=['POST'])
 def process_form():
