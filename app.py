@@ -48,15 +48,16 @@ def place_order():
     for order in orders:
         formatted_order = f'Pizza: {order["Name"]} Price: {order["Price"]} Euro'
         formatted_orders.append(formatted_order)
-    print(formatted_orders)
+    # print(formatted_orders)
     return render_template('MenuPage.html', formatted_orders=formatted_orders )
 # ---------------------------------------------------------------------------------------------------------------
 #redirect orders to mario
-
+data_recieved =[]
 @app.route('/process_form', methods=['POST'])
 def process_form():
-    data_received = request.form.get('data')
-    return redirect(url_for('result', data=data_received))
+    data = request.form['data']
+    data_recieved.append(data)
+    return redirect(url_for('result', data_recieved=data_recieved))
 
 
 @app.route('/marioPage')
