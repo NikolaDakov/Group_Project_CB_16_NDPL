@@ -27,6 +27,7 @@ def login():
 # -----------------------------------------------------------------------------------------------------------------------
 # this will be for trasfer data from menuPage to mario and luigi's pages
 # Create a list to store orders (you can replace this with a database)
+# Logic and Conecting
 orders = []
 
 @app.route('/MenuPage', methods=['POST'])
@@ -37,13 +38,18 @@ def place_order():
     # You can add more processing here, e.g., calculating total price
 
     order = {
-        'item_name': item_name,
-        'item_price': item_price,
+        'Name': item_name,
+        'Price': item_price,
     }
     
     orders.append(order)
-    
-    return render_template('MenuPage.html', orders=orders )
+     # Format the orders list
+    formatted_orders = []
+    for order in orders:
+        formatted_order = f'{order["Name"]} Name: {order["Name"]} Price: {order["Price"]} Euro'
+        formatted_orders.append(formatted_order)
+    print(formatted_orders)
+    return render_template('MenuPage.html', formatted_orders=formatted_orders )
 
 
 

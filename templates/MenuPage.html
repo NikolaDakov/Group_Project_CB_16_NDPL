@@ -307,8 +307,8 @@
   <div id="container">
     <div id="label"><b>Currently Selected Items</div></b>
     <p class="order-list" id="in-progress-list">
-      {% for order in orders %}
-          <li>{{ order }}</li>
+      {% for order1 in formatted_orders %}
+          <li>{{ order1 }}</li>
       {% endfor %}
   </p>
     <div class="resetbutton"><b>Reset</b></div>
