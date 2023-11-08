@@ -16,10 +16,12 @@
         padding: 20px;
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        margin-bottom: 5px;
+        margin-top: 10px;
+        margin-bottom: 20px;
       }
 
       header, footer {
+       position: static;
        background-color: #333;
        color: #fff;
        text-align: center;
@@ -34,7 +36,8 @@
       header img {
        text-align: center;
        position: relative;
-       bottom: 25px;
+       bottom: 50px;
+       left: 25px;
       }
 
       header h1, footer p {
@@ -42,20 +45,25 @@
       }
 
       .img{
+         position: relative;
+         bottom: 45px;
          border-radius: 50%;
          height: 150px;
          width: 180px;
-         padding: 2px;
-         padding-bottom:0px;
+         
+         
       }
       .img1{
+        position: relative;
+        bottom: 40px;
+        margin: 0px;
          border-radius: 50%;
          height: 120px;
          width: 150px;
-         
-         padding-bottom:0px;
       }
       .img2{
+        position: relative;
+        bottom: 40px;
          border-radius: 50%;
          height: 50px;
          width: 50px;
@@ -83,48 +91,119 @@
         display:flex;
       }
       
+      .orderbuttonPizza{
+        height: 60px;
+        width: 215px;
+        background-color: rgb(223, 101, 101);;
+        text-align: center;
+        position: absolute;
+        right:5px;
+        top:206px;
+      }
+
+      .orderbuttonDrink{
+        font-size: 14px;
+        height: 52px;
+        width: 180px;
+        background-color: rgb(223, 101, 101);;
+        text-align: center;
+        table-layout: auto;
+        position: absolute;
+        right:5px;
+        top:180px;
+      }
+
+      .orderbuttonOffer{
+        height: 60px;
+        width: 400px;
+        background-color: rgb(223, 101, 101);;
+        text-align: center;
+        position: absolute;
+        right: 16px;
+        top:198px;
+      }
+
+      h2{
+        position: relative;
+        bottom: 28px;
+      }
+      h3{
+        position: relative;
+        bottom: 28px;
+      }
+
+      .Finish {
+        font-size: large;
+        position: relative;
+        text-align: center;
+        border: 5px solid rgb(40, 40, 40);
+        background-color: rgb(224, 147, 3);
+      }
+
+      .cart {
+        width: 55px;
+        height: 55px;
+        position: relative;
+        left: 62px;
+        bottom: 102px;
+      }
+      
 
     </style>
 </head>
 <body>
   <header>
-    <img src="../static/css/img/newimg.png" alt="logo" width="40%">
+    <img src="../static/css/img/newimg.png" alt="logo" width="45%">
+    <img class="cart" src="https://th.bing.com/th/id/OIP.9UqfoFXUzuxVO1Hs56PQogHaHa?pid=ImgDet&rs=1">
   </header>
   <div class="scrollmenu">
    <div class="buttons">
      <div class="container">
         <h2><p>Pizza Peperonni</p></h2>
         <img class="img" src="https://media.istockphoto.com/photos/pizza-pepperoni-isolated-on-white-background-picture-id1042948900?k=6&m=1042948900&s=170667a&w=0&h=qmTIE03bmDtIBZla4H_1XlVBja33C-9cuWr7s4ayW-I="/>
+        <button class="orderbuttonPizza"><b><p>Order</p></b></button>
      </div>
 
      <div class="container">
       <h2><p>Pizza Margherita</p></h2>
        <img class="img" src="https://freepngimg.com/thumb/pizza/35-pizza-png-image.png"/>
-     </div>
-
-     <div class="container">
-      <h2><p>Pizza New York-Style</p></h2>
-       <img class="img" src="https://th.bing.com/th/id/OIP.INIun9kLbsBm6ErFKsdH6wHaHJ?pid=ImgDet&rs=1"/>
-     </div>
-     
-     <div class="container">
-      <h2><p>Pizza Carbonara</p></h2>
-       <img class="img" src="https://th.bing.com/th/id/R.0c4b26aade1abace71d0195fc73acf8f?rik=TUyZDXIbdj0jVw&pid=ImgRaw&r=0"/>
-     </div>
-
-     <div class="container">
-      <h2><p>Pizza Romana</p></h2>
-       <img class="img" src="https://th.bing.com/th/id/R.a206ea26c1985ba5900fff6090aec166?rik=8OQwaZSo0TBdgg&pid=ImgRaw&r=0"/>
-     </div>
-
-     <div class="container">
-      <h2><p>Pizza Marinara</p></h2>
-        <img class="img" src="https://www.freepngimg.com/thumb/pizza/7-pizza-png-image.png"/>
+       <button class="orderbuttonPizza"><b><p>Order</p></b></button>
      </div>
 
      <div class="container">
       <h2><p>Pizza Crudo</p></h2>
         <img class="img" src="https://veneto.ro/wp-content/uploads/2020/09/veneto-pizza-prosciutto-crudo.png"/>
+        <button class="orderbuttonPizza"><b><p>Order</p></b></button>
+     </div>
+     
+     <div class="container">
+      <h2><p>Pizza Carbonara</p></h2>
+       <img class="img" src="https://th.bing.com/th/id/R.0c4b26aade1abace71d0195fc73acf8f?rik=TUyZDXIbdj0jVw&pid=ImgRaw&r=0"/>
+       <button class="orderbuttonPizza"><b><p>Order</p></b></button>
+     </div>
+
+     <div class="container">
+      <h2><p>Pizza Romana</p></h2>
+       <img class="img" src="https://th.bing.com/th/id/R.a206ea26c1985ba5900fff6090aec166?rik=8OQwaZSo0TBdgg&pid=ImgRaw&r=0"/>
+       <button class="orderbuttonPizza"><b><p>Order</p></b></button>
+     </div>
+
+     <div class="container">
+      <h2><p>Pizza Marinara</p></h2>
+        <img class="img" src="https://www.freepngimg.com/thumb/pizza/7-pizza-png-image.png"/>
+        <button class="orderbuttonPizza"><b><p>Order</p></b></button>
+     </div>
+
+     <div class="container">
+      <h2><p>Pizza Crudo</p></h2>
+        <img class="img" src="https://veneto.ro/wp-content/uploads/2020/09/veneto-pizza-prosciutto-crudo.png"/>
+        <button class="orderbuttonPizza"><b><p>Order</p></b></button>
+     </div>
+
+     <div class="container">
+      <h3><p>Pizza New York-Style</p></h3>
+       <img class="img" src="https://th.bing.com/th/id/OIP.INIun9kLbsBm6ErFKsdH6wHaHJ?pid=ImgDet&rs=1"/>
+       <button class="orderbuttonPizza"><b><p>Order</p></b></button>
      </div>
     </div>
   </div>  
@@ -134,31 +213,37 @@
       <div class="container">
         <h2><p>Cola</p></h2>
         <img class="img1" src="https://pluspng.com/img-png/coca-cola-drink-png-image-320.png"/>
+        <button class="orderbuttonDrink"><b><p>Order</p></b></button>
       </div>
  
       <div class="container">
         <h2><p>Fanta</p></h2>
         <img class="img1" src="https://th.bing.com/th/id/R.b0fbd089bce76c9882e3211f63aa6746?rik=ngzt0JqZuD4Hog&pid=ImgRaw&r=0"/>
+        <button class="orderbuttonDrink"><b><p>Order</p></b></button>
       </div>
  
       <div class="container">
         <h2><p>Ice Tea</p></h2>
         <img class="img1" src="https://th.bing.com/th/id/R.e79766527fc5dd10da4bfc3b1354f8c7?rik=GpOgn1AnYNDzlA&pid=ImgRaw&r=0"/>
+        <button class="orderbuttonDrink"><b><p>Order</p></b></button>
       </div>
       
       <div class="container">
         <h2><p>7up</p></h2>
         <img class="img1" src="https://th.bing.com/th/id/R.5b3da567842575bd37ccad958e4b131b?rik=%2bcb8Gf2hoovoRQ&pid=ImgRaw&r=0"/>
+        <button class="orderbuttonDrink"><b><p>Order</p></b></button>
       </div>
  
       <div class="container">
         <h2><p>Beer</p></h2>
         <img class="img1" src="https://th.bing.com/th/id/R.329c8f9cf1c15332d9fe47f3623be999?rik=fD7sPCT0g56SsQ&pid=ImgRaw&r=0"/>
+        <button class="orderbuttonDrink"><b><p>Order</p></b></button>
       </div>
  
       <div class="container">
         <h2><p>Water</p></h2>
-        <img class="img1" src="https://th.bing.com/th/id/R.4a17c7e2b802ee84a761f23bcf8f5306?rik=GTjuk%2fBybcZq%2bA&riu=http%3a%2f%2fpngimg.com%2fuploads%2fwater_bottle%2fwater_bottle_PNG10157.png&ehk=6S8qztX%2boSzYn3S3XWmGqMMG7oTjvNHasFxy94RO4Wc%3d&risl=1&pid=ImgRaw&r=0"/>
+        <img class="img1" src="https://purepng.com/public/uploads/large/purepng.com-ice-water-bottle-aquafinabottle-water-drink-aquafina-9415246348499t1u0.png"/>
+        <button class="orderbuttonDrink"><b><p>Order</p></b></button>
       </div>
  
      </div>
@@ -171,7 +256,7 @@
        <img class="img" src="https://th.bing.com/th/id/OIP.INIun9kLbsBm6ErFKsdH6wHaHJ?pid=ImgDet&rs=1"/>
        <img class="img2" src="https://www.pngarts.com/files/3/Plus-Symbol-Transparent-Images.png"/>
        <img class="img1" src="https://th.bing.com/th/id/R.5b3da567842575bd37ccad958e4b131b?rik=%2bcb8Gf2hoovoRQ&pid=ImgRaw&r=0"/>
-
+       <button class="orderbuttonOffer"><b><p>Order</p></b></button>
       </div>
  
       <div class="container">
@@ -179,6 +264,7 @@
         <img class="img" src="https://freepngimg.com/thumb/pizza/35-pizza-png-image.png"/>
         <img class="img2" src="https://www.pngarts.com/files/3/Plus-Symbol-Transparent-Images.png"/>
         <img class="img1" src="https://pluspng.com/img-png/coca-cola-drink-png-image-320.png"/>
+        <button class="orderbuttonOffer"><b><p>Order</p></b></button>
       </div>
  
       <div class="container">
@@ -186,6 +272,7 @@
         <img class="img" src="https://veneto.ro/wp-content/uploads/2020/09/veneto-pizza-prosciutto-crudo.png"/>
         <img class="img2" src="https://www.pngarts.com/files/3/Plus-Symbol-Transparent-Images.png"/>
         <img class="img1" src="https://th.bing.com/th/id/R.e79766527fc5dd10da4bfc3b1354f8c7?rik=GpOgn1AnYNDzlA&pid=ImgRaw&r=0"/>
+        <button class="orderbuttonOffer"><b><p>Order</p></b></button>
       </div>
       
       <div class="container">
@@ -193,12 +280,15 @@
         <img class="img" src="https://media.istockphoto.com/photos/pizza-pepperoni-isolated-on-white-background-picture-id1042948900?k=6&m=1042948900&s=170667a&w=0&h=qmTIE03bmDtIBZla4H_1XlVBja33C-9cuWr7s4ayW-I="/>
         <img class="img2" src="https://www.pngarts.com/files/3/Plus-Symbol-Transparent-Images.png"/>
         <img class="img" src="https://media.istockphoto.com/photos/pizza-pepperoni-isolated-on-white-background-picture-id1042948900?k=6&m=1042948900&s=170667a&w=0&h=qmTIE03bmDtIBZla4H_1XlVBja33C-9cuWr7s4ayW-I="/>
+        <button class="orderbuttonOffer"><b><p>Order</p></b></button>
       </div>
       
      </div>
    </div>  
   </div>  
  
+  <button class="Finish"><b><p> Finish Order</p></b></button>
+
 <hr>
 <hr>
 <footer>
