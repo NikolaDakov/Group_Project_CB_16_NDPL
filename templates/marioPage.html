@@ -17,48 +17,67 @@
   <div class="container">
     <div class="table">
         <h2><center>Unpaid</center></h2>
-        <ul class="order-list" id="in-progress-list">
-            
+        <ul class="order-list" id="unpaid-list">
+            <li class="order-item"><input type="checkbox" class="order-checkbox"> Item 1</li>
+            <li class="order-item"><input type="checkbox" class="order-checkbox"> Item 2</li>
         </ul>
-        <button id="go-to-furnace-button"><h2>Go To Ordered</2h></button>
+        <button id="go-to-ordered-button"><h2>Go To Ordered</h2></button>
     </div>
 
     <div class="table">
         <h2><center>Ordered</center></h2>
-        <ul class="order-list" id="in-progress-list">
-             <ul>
-                <p class="order-list" id="in-progress-list">
-                    {% for order in orders %}
-        <li>Pizza: {{ order.Name }} - Price: {{ order.Price }} Euro</li>
-    {% endfor %}
-                    
-                </p>
-    </ul>
+        <ul class="order-list" id="ordered-list">
+            <!-- List items will be dynamically added here -->
         </ul>
     </div>
 
     <div class="table">
         <h2><center>In Progress</center></h2>
         <ul class="order-list" id="in-progress-list">
+            <!-- List items will be dynamically added here -->
         </ul>
     </div>
 
     <div class="table">
         <h2><center>In Furnace</center></h2>
-        <ul class="order-list" id="in-progress-list">
-            
+        <ul class="order-list" id="in-furnace-list">
+            <p class="order-list" id="in-progress-list">
+                <ul class="order-item">
+                    <input type="checkbox" class="order-checkbox">
+                    <li>Pizza: Margherita - Price: 10 Euro</li>
+                </ul>
+                <ul class="order-item">
+                    <input type="checkbox" class="order-checkbox">
+                    <li>Pizza: Pepperoni - Price: 12 Euro</li>
+                </ul>
+            </p>
         </ul>
-        <button id="go-to-furnace-button"><h2>Completed</2h></button>
+        <button id="completed-button"><h2>Completed</h2></button>
     </div>
 
     <div class="table">
         <h2><center>Completed</center></h2>
-        <ul class="order-list" id="in-progress-list">
-            
+        <ul class="order-list" id="completed-list">
+            <!-- List items will be dynamically added here -->
         </ul>
     </div>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Button click events
+        $('#go-to-ordered-button').on('click', function () {
+            // Move all items from unpaid-list to ordered-list
+            $('#ordered-list').append($('#unpaid-list .order-item'));
+        });
+
+        $('#completed-button').on('click', function () {
+            // Move all checked items from in-furnace-list to completed-list
+            $('#completed-list').append($('#in-furnace-list .order-item:has(:checkbox:checked)'));
+        });
+    });
+</script>
 <footer>
     <p>&copy; 2023 NDPL. All rights reserved</p>
 </footer>
