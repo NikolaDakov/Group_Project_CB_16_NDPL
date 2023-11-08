@@ -74,7 +74,7 @@ def mario_page():
 #route to display LuigiPage or KitchenPage
 @app.route('/kitchenPage')
 def kitchenPage():
-    return render_template('kitchenPage.html') 
+    return render_template('kitchenPage.html', orders=orders) 
 
 # Route to display the 'invalidMessage.html'
 @app.route('/invalidMessage')
