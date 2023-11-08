@@ -18,7 +18,10 @@
             <!-- example orders -->
             <li class="order-item">
                 <input type="checkbox">
-                Peperoni 222
+                {% for order in orders %}
+                Pizza: {{ order.Name }} - Price: {{ order.Price }} Euro 
+                {% endfor %}
+                
             </li>
             <li class="order-item">
                 <input type="checkbox">
