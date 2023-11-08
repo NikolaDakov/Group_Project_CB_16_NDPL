@@ -16,14 +16,15 @@
         <h2><center>Orders To Be Done</h2></center>
         <ul class="order-list" id="todo-list">
             <!-- example orders -->
+            {% for order in orders %}
             <li class="order-item">
                 <input type="checkbox">
-                {% for order in orders %}
                 Pizza: {{ order.Name }} - Price: {{ order.Price }} Euro 
-                {% endfor %}
-                Total Price {{total_price}}
-                
             </li>
+                {% endfor %}
+                
+                
+            
             <li class="order-item">
                 <input type="checkbox">
                 Hertogenbosh 222
