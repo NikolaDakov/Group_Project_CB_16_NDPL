@@ -42,6 +42,7 @@
         }
         
         .button1 {
+        
          background-color: white; 
          color: black; 
          border: 5px solid #272626;
@@ -189,7 +190,7 @@
 
         .pizzaorder{
           top: 430px;
-          right: 190px;
+          right: 180px;
           text-align:center;
           position: relative;
           height: 60px;
@@ -208,7 +209,7 @@
         }
 
         .offerorder{
-          top: 235px;
+          top: 290px;
           right: 250px;
           text-align:center;
           position: relative;
@@ -228,10 +229,10 @@
   <div class="scrollmenu">
    <div class="buttons">
       <button class="button button1">
-       <h2><p>Margarita</p></h2>
+       <h2><p>Peperonni</p></h2>
        <img class="img" src="https://media.istockphoto.com/photos/pizza-pepperoni-isolated-on-white-background-picture-id1042948900?k=6&m=1042948900&s=170667a&w=0&h=qmTIE03bmDtIBZla4H_1XlVBja33C-9cuWr7s4ayW-I="/>
        <b><p> Ingredients:</p></b>
-       <p>Tomato sauce, mozzarella,<br> mushrooms, ham, artichokes,<br> olives, and oregano</p>
+       <p>Tomato sauce, salami, garlic,<br> mozzarella</p>
        
        <form method="POST" action="/MenuPage">
         <input type="hidden" name="item_name" value="Peperonni">
@@ -241,13 +242,13 @@
     
       </button>
       <button class="button button1">
-       <h2><p>Margarita</p></h2>
+       <h2><p>Margherita</p></h2>
        <img class="img" src="https://freepngimg.com/thumb/pizza/35-pizza-png-image.png"/>
        <b><p> Ingredients:</p></b>
-       <p>Tomato sauce, mozzarella,<br> mushrooms, ham, artichokes,<br> olives, and oregano</p>
+       <p>Tomato sauce, mozzarella, and<br> oregano</p>
 
        <form method="POST" action="/MenuPage">
-        <input type="hidden" name="item_name" value="Margarita">
+        <input type="hidden" name="item_name" value="Margherita">
         <input type="hidden" name="item_price" value="12">
         <button type="submit" class="pizzaorder"><b>Order Pizza</b></button>
        </form>
@@ -270,7 +271,7 @@
        <h2><p>Carbonara</p></h2>
        <img class="img" src="https://th.bing.com/th/id/R.0c4b26aade1abace71d0195fc73acf8f?rik=TUyZDXIbdj0jVw&pid=ImgRaw&r=0"/>
        <b><p> Ingredients:</p></b>
-       <p>Tomato sauce, mozzarella,<br> mushrooms, ham, artichokes,<br> olives, and oregano</p>
+       <p>Tomato sauce, mozzarella,<br> parmesan, eggs, and bacon</p>
 
        <form method="POST" action="/MenuPage">
         <input type="hidden" name="item_name" value="Carbonara">
@@ -283,7 +284,7 @@
        <h2><p>Romana</p></h2>
        <img class="img" src="https://th.bing.com/th/id/R.a206ea26c1985ba5900fff6090aec166?rik=8OQwaZSo0TBdgg&pid=ImgRaw&r=0"/>
        <b><p> Ingredients:</p></b>
-       <p>Tomato sauce, mozzarella,<br> mushrooms, ham, artichokes,<br> olives, and oregano</p>
+       <p>Tomato sauce, mozzarella,<br> anchovies, capers,<br> and oregano</p>
 
        <form method="POST" action="/MenuPage">
         <input type="hidden" name="item_name" value="Romana">
@@ -296,7 +297,7 @@
         <h2><p>Marinara</p></h2>
         <img class="img" src="https://www.freepngimg.com/thumb/pizza/7-pizza-png-image.png"/>
         <b><p> Ingredients:</p></b>
-        <p>Tomato sauce, mozzarella,<br> mushrooms, ham, artichokes,<br> olives, and oregano</p>
+        <p>Tomato sauce, garlic and basil</p>
 
         <form method="POST" action="/MenuPage">
           <input type="hidden" name="item_name" value="Marinara">
@@ -307,9 +308,9 @@
        </button>
        <button class="button button1">
         <h2><p>Crudo</p></h2>
-        <img class="img" src="https://media.istockphoto.com/photos/pizza-pepperoni-isolated-on-white-background-picture-id1042948900?k=6&m=1042948900&s=170667a&w=0&h=qmTIE03bmDtIBZla4H_1XlVBja33C-9cuWr7s4ayW-I="/>
+        <img class="img" src="https://veneto.ro/wp-content/uploads/2020/09/veneto-pizza-prosciutto-crudo.png"/>
         <b><p> Ingredients:</p></b>
-        <p>Tomato sauce, mozzarella,<br> mushrooms, ham, artichokes,<br> olives, and oregano</p>
+        <p>Tomato sauce, mozzarella<br> and Parma ham</p>
 
         <form method="POST" action="/MenuPage">
           <input type="hidden" name="item_name" value="Crudo">
@@ -398,48 +399,52 @@
   <div class="scrollmenu">
    <div class="buttons">
       <button class="button button1">
-       <img class="img" src="https://freepngimg.com/thumb/pizza/35-pizza-png-image.png"/>
+        <p><h2>NY Style</h2></p>
+       <img class="img" src="https://th.bing.com/th/id/OIP.INIun9kLbsBm6ErFKsdH6wHaHJ?pid=ImgDet&rs=1"/>
        <img class="img2" src="https://www.pngarts.com/files/3/Plus-Symbol-Transparent-Images.png"/>
-       <img class="img3" src="https://pluspng.com/img-png/coca-cola-drink-png-image-320.png"/>
+       <img class="img3" src="https://th.bing.com/th/id/R.5b3da567842575bd37ccad958e4b131b?rik=%2bcb8Gf2hoovoRQ&pid=ImgRaw&r=0"/>
 
        <form method="POST" action="/MenuPage">
-        <input type="hidden" name="item_name" value="Offer">
+        <input type="hidden" name="item_name" value="NY Stle Offer">
         <input type="hidden" name="item_price" value="15.50">
         <button type="submit" class="offerorder"><b>Order Offer</b></button>
        </form>
 
       </button>
       <button class="button button1">
+        <p><h2>Marg. Deal</h2></p>
         <img class="img" src="https://freepngimg.com/thumb/pizza/35-pizza-png-image.png"/>
         <img class="img2" src="https://www.pngarts.com/files/3/Plus-Symbol-Transparent-Images.png"/>
         <img class="img3" src="https://pluspng.com/img-png/coca-cola-drink-png-image-320.png"/>
 
         <form method="POST" action="/MenuPage">
-          <input type="hidden" name="item_name" value="Offer">
+          <input type="hidden" name="item_name" value="Marg. Offer">
           <input type="hidden" name="item_price" value="13.50">
           <button type="submit" class="offerorder"><b>Order Offer</b></button>
          </form>
 
       </button>
       <button class="button button1">
-        <img class="img" src="https://freepngimg.com/thumb/pizza/35-pizza-png-image.png"/>
+        <p><h2>Crudo Special</h2></p>
+        <img class="img" src="https://veneto.ro/wp-content/uploads/2020/09/veneto-pizza-prosciutto-crudo.png"/>
         <img class="img2" src="https://www.pngarts.com/files/3/Plus-Symbol-Transparent-Images.png"/>
-        <img class="img3" src="https://pluspng.com/img-png/coca-cola-drink-png-image-320.png"/>
+        <img class="img3" src="https://th.bing.com/th/id/R.e79766527fc5dd10da4bfc3b1354f8c7?rik=GpOgn1AnYNDzlA&pid=ImgRaw&r=0"/>
 
         <form method="POST" action="/MenuPage">
-          <input type="hidden" name="item_name" value="Offer">
+          <input type="hidden" name="item_name" value="Crudo Offer">
           <input type="hidden" name="item_price" value="12.50">
           <button type="submit" class="offerorder"><b>Order Offer</b></button>
          </form>
 
       </button>
       <button class="button button1">
-        <img class="img" src="https://freepngimg.com/thumb/pizza/35-pizza-png-image.png"/>
+        <p><h2>Peperonni Deal</h2></p>
+        <img class="img" src="https://media.istockphoto.com/photos/pizza-pepperoni-isolated-on-white-background-picture-id1042948900?k=6&m=1042948900&s=170667a&w=0&h=qmTIE03bmDtIBZla4H_1XlVBja33C-9cuWr7s4ayW-I="/>
         <img class="img2" src="https://www.pngarts.com/files/3/Plus-Symbol-Transparent-Images.png"/>
-        <img class="img3" src="https://pluspng.com/img-png/coca-cola-drink-png-image-320.png"/>
+        <img class="img" src="https://media.istockphoto.com/photos/pizza-pepperoni-isolated-on-white-background-picture-id1042948900?k=6&m=1042948900&s=170667a&w=0&h=qmTIE03bmDtIBZla4H_1XlVBja33C-9cuWr7s4ayW-I="/>
 
         <form method="POST" action="/MenuPage">
-          <input type="hidden" name="item_name" value="Offer">
+          <input type="hidden" name="item_name" value="Peperonni Offer">
           <input type="hidden" name="item_price" value="12.50">
           <button type="submit" class="offerorder"><b>Order Offer</b></button>
          </form>
