@@ -40,6 +40,7 @@ def place_order():
     order = {
         'Name': item_name,
         'Price': item_price,
+        
     }
     
     orders.append(order)
@@ -55,7 +56,8 @@ def place_order():
 @app.route("/orderbutton", methods=['POST'])
 def orderbutton():
     return render_template("/marioPage.html", orders=orders)
-#redirect orders to Luigi
+# -------------------------------------------------------------------------------------------------------------------5
+# create new checkbox in KitchenPage every time i press order
 
 # -------------------------------------------------------------------------------------------------------------------5
 # Reset Function
