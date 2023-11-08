@@ -15,10 +15,11 @@
     <div class="table">
         <h2><center>Orders To Be Done</h2></center>
         <ul class="order-list" id="todo-list">
-            <!-- example orders -->
             <li class="order-item">
                 <input type="checkbox">
-                Peperoni 222
+                {% for order in orders %}
+        <li>{{ order.Name }} - Price: {{ order.Price }} Euro</li>
+    {% endfor %}
             </li>
             <li class="order-item">
                 <input type="checkbox">
