@@ -67,10 +67,9 @@ def orderbutton():
 @app.route('/resetbutton', methods=['POST'])
 def resetbutton():
     orders.clear()
-    print(orders)
+    global total_price
     total_price = 0
     return redirect('/MenuPage')
-
 # -----------------------------------------------------------------------------------------------------------------------
 # Route to display the 'marioPage.html'
 @app.route('/marioPage')
