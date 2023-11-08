@@ -2,7 +2,6 @@ from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 
-
 # Dictionary to store predefined user credentials
 user1 ={'Mario12': '12'}
 user2 ={'Luigi13': '13'}
@@ -50,7 +49,7 @@ def place_order():
      # Format the orders list
     formatted_orders = []
     for order in orders:
-        formatted_order = f'Pizza: {order["Name"]} Price: {order["Price"]} Euro'
+        formatted_order = f'Product: {order["Name"]} Price: {order["Price"]} Euro'
         formatted_orders.append(formatted_order)
 
 
@@ -64,6 +63,7 @@ def place_order():
 #redirect orders to luigi
 @app.route("/orderbutton", methods=['POST'])
 def orderbutton():
+    global orders, total_price
     return render_template("/marioPage.html", orders=orders, total_price=total_price)
 
 
@@ -90,6 +90,7 @@ def mario_page():
 #route to display LuigiPage or KitchenPage
 @app.route('/kitchenPage')
 def kitchenPage():
+    global orders
     return render_template('kitchenPage.html', orders=orders) 
 
 
