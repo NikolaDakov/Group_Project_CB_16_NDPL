@@ -51,10 +51,10 @@ def place_order():
     # print(formatted_orders)
     return render_template('MenuPage.html', formatted_orders=formatted_orders )
 # ---------------------------------------------------------------------------------------------------------------
-#redirect orders to mario
+#redirect orders to luigi
 @app.route("/orderbutton", methods=['POST'])
 def orderbutton():
-    return render_template("/marioPage.html", orders=orders)
+    return render_template("/KitchenPage.html", orders=orders)
 #redirect orders to Luigi
 
 # -------------------------------------------------------------------------------------------------------------------5
