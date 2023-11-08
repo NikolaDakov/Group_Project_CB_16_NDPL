@@ -456,6 +456,7 @@
       {% for order1 in formatted_orders %}
           <li>{{ order1 }}</li>
       {% endfor %}
+      Total Price {{total_price}}
   </p>
   <form method="POST" action="/resetbutton">
     <button type="submit" class="resetbutton"><b>Reset</b></button>
