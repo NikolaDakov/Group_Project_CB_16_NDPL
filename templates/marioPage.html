@@ -28,8 +28,9 @@
         <h2><center>Ordered</center></h2>
         <ul class="order-list" id="ordered-list">
             {% for order in orders %}
-                Pizza: {{ order.Name }} - Price: {{ order.Price }} Euro 
+                Pizza: {{ order.Name }} - Price: {{ order.Price }} Euro
                 {% endfor %}
+                Total Price {{total_price}}
             
         </ul>
     </div>

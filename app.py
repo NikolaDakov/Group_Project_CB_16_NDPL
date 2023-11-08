@@ -29,6 +29,7 @@ def login():
 # Create a list to store orders (you can replace this with a database)
 # Logic and Conecting
 orders = []
+total_price = 0
 
 @app.route('/MenuPage', methods=['POST'])
 def place_order():
@@ -42,22 +43,24 @@ def place_order():
         'Price': item_price,
         
     }
-    
     orders.append(order)
      # Format the orders list
     formatted_orders = []
     for order in orders:
         formatted_order = f'Pizza: {order["Name"]} Price: {order["Price"]} Euro'
         formatted_orders.append(formatted_order)
+    # calculate total price
+    global total_price
+    total_price += item_price
     # print(formatted_orders)
-    return render_template('MenuPage.html', formatted_orders=formatted_orders )
+    return render_template('MenuPage.html', formatted_orders=formatted_orders, total_price=total_price)
 # ---------------------------------------------------------------------------------------------------------------
 #redirect orders to luigi
 @app.route("/orderbutton", methods=['POST'])
 def orderbutton():
-    return render_template("/marioPage.html", orders=orders)
+    return render_template("/marioPage.html", orders=orders, total_price=total_price)
 # -------------------------------------------------------------------------------------------------------------------5
-# create new checkbox in KitchenPage every time i press order
+
 
 # -------------------------------------------------------------------------------------------------------------------5
 # Reset Function
