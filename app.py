@@ -68,6 +68,7 @@ def orderbutton():
 def resetbutton():
     orders.clear()
     print(orders)
+    total_price = 0
     return redirect('/MenuPage')
 
 # -----------------------------------------------------------------------------------------------------------------------
