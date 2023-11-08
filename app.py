@@ -83,7 +83,9 @@ def resetbutton():
 # Route to display the 'marioPage.html'
 @app.route('/marioPage')
 def mario_page():
-    return render_template('marioPage.html')  
+    global orders
+    global total_price
+    return render_template('marioPage.html', orders=orders, total_price=total_price)  
 
 
 
