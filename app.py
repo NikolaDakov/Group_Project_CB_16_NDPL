@@ -54,7 +54,7 @@ def place_order():
 #redirect orders to luigi
 @app.route("/orderbutton", methods=['POST'])
 def orderbutton():
-    return render_template("/KitchenPage.html", orders=orders)
+    return render_template("/marioPage.html", orders=orders)
 #redirect orders to Luigi
 
 # -------------------------------------------------------------------------------------------------------------------5
