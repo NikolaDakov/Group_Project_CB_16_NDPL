@@ -35,9 +35,7 @@ total_price = 0
 def place_order():
     item_name = request.form['item_name']
     item_price = float(request.form['item_price'])
-    
-    # You can add more processing here, e.g., calculating total price
-
+  
     order = {
         'Name': item_name,
         'Price': item_price,
@@ -52,7 +50,7 @@ def place_order():
     # calculate total price
     global total_price
     total_price += item_price
-    # print(formatted_orders)
+
     return render_template('MenuPage.html', formatted_orders=formatted_orders, total_price=total_price)
 # ---------------------------------------------------------------------------------------------------------------
 #redirect orders to luigi
@@ -60,8 +58,6 @@ def place_order():
 def orderbutton():
     return render_template("/marioPage.html", orders=orders, total_price=total_price)
 # -------------------------------------------------------------------------------------------------------------------5
-
-
 # -------------------------------------------------------------------------------------------------------------------5
 # Reset Function
 @app.route('/resetbutton', methods=['POST'])
