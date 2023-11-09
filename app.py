@@ -33,6 +33,8 @@ def login():
 # Logic and Conecting
 orders = []
 total_price = 0
+in_progress_orders = []
+cooked_orders = []
 
 @app.route('/MenuPage', methods=['POST'])
 def place_order():
@@ -68,8 +70,25 @@ def orderbutton():
 
 
 # -------------------------------------------------------------------------------------------------------------------5
-# -------------------------------------------------------------------------------------------------------------------5
-
+# Take in button
+# Route for the "Take In" button
+@app.route('/takeIn', methods=['POST'])
+def take_in():
+    global orders, in_progress_orders
+    in_progress_orders = orders.copy()
+    # print(in_progress_orders)
+    orders.clear()
+    print(orders)
+    return render_template('KitchenPage.html', in_progress_orders=in_progress_orders)
+# -------------------------------------------------------------------------------------------------------------------------
+# Go to Oven Button
+@app.route('/go_to_oven', methods=['POST'])
+def go_to_oven():
+    global orders, cooked_orders
+    cooked_orders = in_progress_orders.copy()
+    in_progress_orders.clear()
+    return render_template("KitchenPage.html", cooked_orders=cooked_orders)
+# ----- -------------------------------------------------------------------------------------------------------------------
 # Reset Function
 
 @app.route('/resetbutton', methods=['POST'])
@@ -83,17 +102,17 @@ def resetbutton():
 # Route to display the 'marioPage.html'
 @app.route('/marioPage')
 def mario_page():
-    global orders
-    global total_price
-    return render_template('marioPage.html', orders=orders, total_price=total_price)  
+    global orders, in_progress_orders
+    global total_price, cooked_orders
+    return render_template('marioPage.html', orders=orders, total_price=total_price, in_progress_orders=in_progress_orders, cooked_orders=cooked_orders)  
 
 
 
-#route to display LuigiPage or KitchenPage
+#route to display KitchenPage
 @app.route('/kitchenPage')
 def kitchenPage():
-    global orders
-    return render_template('kitchenPage.html', orders=orders) 
+    global orders, in_progress_orders
+    return render_template('kitchenPage.html', orders=orders, in_progress_orders=in_progress_orders) 
 
 
 # Route to display the 'invalidMessage.html'
@@ -106,6 +125,7 @@ def invalid_message():
 @app.route('/MenuPage')
 def MenuPage():
     return render_template('MenuPage.html')  
+
 
 
 if __name__ == '__main__':

@@ -18,9 +18,7 @@
     <div class="table">
         <h2><center>Unpaid</center></h2>
         <ul class="order-list" id="unpaid-list" style="list-style-type: none; height: 238px;">
-            <!-- <li class="order-item"><input type="checkbox" class="order-checkbox"> Item 1</li>
-            <li class="order-item"><input type="checkbox" class="order-checkbox"> Item 2</li>
-         -->
+           
         </ul>
         <button id="go-to-ordered-button" style="width: 100%; background-color: black; color: white;"><h2>Go To Ordered</h2></button>
     </div>
@@ -42,7 +40,10 @@
     <div class="table" style="list-style-type: none;">
         <h2><center>In Progress</center></h2>
         <ul class="order-list" id="in-progress-list" style="height: 300px;">
-           
+            {% for order1 in in_progress_orders %}
+            <li>Product: {{ order1.Name }} - Price: {{ order1.Price }} Euro
+                {% endfor %}
+            </li>
         </ul>
     </div>
 
@@ -53,6 +54,12 @@
                 <ul class="order-item">
                 </ul>
                 <ul class="order-item">
+                    {% for order in cooked_orders %}
+                    <li> 
+                      <input type="checkbox">
+                      Product: {{ order.Name }} Price: {{order.Price}}
+                  </li>
+                  {% endfor %}
                 </ul>
             </p>
         </ul>

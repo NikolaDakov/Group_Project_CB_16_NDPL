@@ -15,7 +15,6 @@
     <div class="table">
         <h2><center>Orders To Be Done</h2></center>
         <ul class="order-list" id="todo-list">
-            <!-- example orders -->
             {% for order in orders %}
             <li class="order-item">
                 <input type="checkbox">
@@ -24,21 +23,36 @@
                 {% endfor %}
             
         </ul>
+        <form method="POST" action="/takeIn">
         <button id="take-in-button"><h2>Take In</h2></button>
+        
+        </form>
     </div>
     
     <div class="table">
         <h2><center>Orders In Progress</center></h2>
-        <ul class="order-list" id="in-progress-list">
-            
+        <ul class="order-list" id="in-progress-list" style="height: 300px;">
+            {% for order in in_progress_orders %}
+              <li> 
+                <input type="checkbox">
+                Product: {{ order.Name }} Price: {{order.Price}}
+            </li>
+            {% endfor %}
         </ul>
+        <form method="POST" action="/go_to_oven">
         <button id="go-to-furnace-button"><h2>Go To Furnace</2h></button>
+        </form>
     </div>
 
     <div class="table">
         <h1><center>Furnace</center></h1>
         <ul class="order-list" id="in-furnace-list">
-           
+            {% for order in cooked_orders %}
+            <li> 
+              <input type="checkbox">
+              Product: {{ order.Name }} Price: {{order.Price}}
+          </li>
+          {% endfor %}
         </ul>
     </div>
 </div>
