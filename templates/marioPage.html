@@ -51,15 +51,13 @@
         <h2><center>In Oven</center></h2>
         <ul class="order-list" id="in-furnace-list" style="list-style-type: none; height: 238px;">
             <p class="order-list" id="in-progress-list">
-                <ul class="order-item">
-                </ul>
-                <ul class="order-item">
+                <ul>
                     {% for order in cooked_orders %}
-                    <li> 
+                    <li class="order-item"> 
                       <input type="checkbox">
                       Product: {{ order.Name }} Price: {{order.Price}}
                   </li>
-                  {% endfor %}
+                        {% endfor %}
                 </ul>
             </p>
         </ul>

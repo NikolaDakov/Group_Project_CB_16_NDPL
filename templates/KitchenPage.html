@@ -33,7 +33,7 @@
         <h2><center>Orders In Progress</center></h2>
         <ul class="order-list" id="in-progress-list" style="height: 300px;">
             {% for order in in_progress_orders %}
-              <li> 
+              <li class="order-item"> 
                 <input type="checkbox">
                 Product: {{ order.Name }} Price: {{order.Price}}
             </li>
@@ -48,8 +48,7 @@
         <h1><center>Furnace</center></h1>
         <ul class="order-list" id="in-furnace-list">
             {% for order in cooked_orders %}
-            <li> 
-              <input type="checkbox">
+            <li class="order-item"> 
               Product: {{ order.Name }} Price: {{order.Price}}
           </li>
           {% endfor %}

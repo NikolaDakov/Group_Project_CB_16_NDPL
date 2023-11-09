@@ -34,6 +34,16 @@ header .username {
         
 }
 
+.order-item {
+    text-align: left;
+    border: 5px solid #ddd;
+    border-color: orange;
+    margin: 6px ;
+    padding: 7px;
+    display: flex;
+    justify-content: space-between;
+}
+
 footer {
     position: fixed;
     bottom: 0;
